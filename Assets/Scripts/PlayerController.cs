@@ -19,30 +19,30 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         if(Input.GetKey(KeyCode.W))
-        { 
-            transform.Translate(0, 0, 1 * moveSpeed);
+        {
+            transform.position += transform.forward * Time.deltaTime * moveSpeed;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(-1 * moveSpeed, 0, 0);
+            transform.position += -transform.right * Time.deltaTime * moveSpeed;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(0, 0, -1 * moveSpeed);
+            transform.position += -transform.forward * Time.deltaTime * moveSpeed;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(1 * moveSpeed, 0, 0);
+            transform.position += transform.right * Time.deltaTime * moveSpeed;
         }
 
+        //Sprint
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             moveSpeed = moveSpeed * 2;
         }
-
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             moveSpeed = moveSpeed / 2;
