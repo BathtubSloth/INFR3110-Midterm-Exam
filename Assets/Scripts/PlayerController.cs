@@ -9,12 +9,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 1;
+    
 
     // Update is called once per frame
     void Update()
     {
         Move();
     }
+
 
     private void Move()
     {

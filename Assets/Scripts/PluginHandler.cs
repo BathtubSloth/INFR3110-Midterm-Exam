@@ -27,7 +27,7 @@ public class PluginHandler : MonoBehaviour
     [DllImport(DLL_NAME)]
     private static extern int GetNumCheckpoint();
 
-    public void SaveTimeTest(float checkpointTime)
+    public static void SaveTimeTest(float checkpointTime)
     {
         SaveCheckpointTime(checkpointTime);
     }
@@ -65,7 +65,7 @@ public class PluginHandler : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {      
         // CHANGE THIS WHEN I HAVE A CHARACTER CONTROLLER
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
