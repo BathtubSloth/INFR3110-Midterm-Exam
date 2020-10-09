@@ -44,12 +44,12 @@ public class PluginHandler : MonoBehaviour
         }
     }
 
-    public float LoadTotalTimeTest()
+    public static float LoadTotalTimeTest()
     {
         return GetTotalTime();
     }
 
-    public void ResetLoggerTest()
+    public static void ResetLoggerTest()
     {
         ResetLogger();
     }
@@ -66,27 +66,12 @@ public class PluginHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {      
-        // CHANGE THIS WHEN I HAVE A CHARACTER CONTROLLER
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            float currentTime = Time.time;
-            float checkpointTime = currentTime - lastTime;
-            lastTime = currentTime;
-
-            SaveTimeTest(checkpointTime);
-        }
-
         for (int i = 0; i < 10; i++)
         {
             if(Input.GetKeyDown(KeyCode.Alpha0+i))
             {
                 UnityEngine.Debug.Log(LoadTimeTest(i));
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            UnityEngine.Debug.Log(LoadTotalTimeTest());
         }
     }
 

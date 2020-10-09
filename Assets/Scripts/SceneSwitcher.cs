@@ -7,6 +7,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     public static void SwitchSceneToStart()
     {
+        PluginHandler.ResetLoggerTest();
         SceneManager.LoadScene("Start Scene"); // from https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadScene.html
     }
     
