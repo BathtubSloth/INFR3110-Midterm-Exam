@@ -32,7 +32,7 @@ public class PluginHandler : MonoBehaviour
         SaveCheckpointTime(checkpointTime);
     }
 
-    public float LoadTimeTest(int index)
+    public static float LoadTimeTest(int index)
     {
         if (index >= GetNumCheckpoint())
         {
@@ -52,6 +52,7 @@ public class PluginHandler : MonoBehaviour
     public static void ResetLoggerTest()
     {
         ResetLogger();
+        UnityEngine.Debug.Log("ahh");
     }
 
 
@@ -63,20 +64,5 @@ public class PluginHandler : MonoBehaviour
         lastTime = Time.time;
     }
 
-    // Update is called once per frame
-    void Update()
-    {      
-        for (int i = 0; i < 10; i++)
-        {
-            if(Input.GetKeyDown(KeyCode.Alpha0+i))
-            {
-                UnityEngine.Debug.Log(LoadTimeTest(i));
-            }
-        }
-    }
-
-    void OnDestroy()
-    {
-        ResetLoggerTest();
-    }
+    
 }

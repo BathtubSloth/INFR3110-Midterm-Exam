@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
-
+    //Basic move functions
     private void Move()
     {
         if(Input.GetKey(KeyCode.W))
